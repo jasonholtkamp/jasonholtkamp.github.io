@@ -47,6 +47,6 @@ canvas {
 .vertL{height:100%; width:0px; position:fixed; left:87px; top:0px; border-left:1px solid #A3C4A9;}
 .horizC{height:2px; width:100%; position:absolute; left:0px; top:90px; background-color: #3D6F54;}
 .horizLU{height:1px; width:87px; position:absolute; left:0px; top:89px; background-color: #CEFEE6;}
-.horizLL{height:1px; width:87px; position:absolute; left:0px; top:91px; background-color: #A3C4A9;}
+.horizLL{height:1px; width:87px; position:absolute; left:0px; top:92px; background-color: #A3C4A9;}
 .horizRU{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:89px; background-color: #CEFEE6;}
-.horizRL{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:91px; background-color: #A3C4A9;}
+.horizRL{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:92px; background-color: #A3C4A9;}
