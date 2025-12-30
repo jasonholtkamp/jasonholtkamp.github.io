@@ -20,6 +20,8 @@ body{
         linear-gradient(rgb(208,218,194) 3px, transparent 1px);
     background-size: 
                 20px 20px,
+                20px 20px,
+                100px 100px,
                 100px 100px;
     background-color: rgb(236,246,222)
 }
