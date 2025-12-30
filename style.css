@@ -7,7 +7,7 @@
     font-style: normal;
 }
 
-body {font-family: 'Source Sans 3', sans-serif;}
+body {font-family: 'Source Sans 3', sans-serif; font-weight:350}
 p {text-align:center;}
 canvas {
     position:fixed;
