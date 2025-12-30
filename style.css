@@ -14,9 +14,13 @@ body {
 body{
     
     background-image:
-        linear-gradient(to right, rgb(208,218,194) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(208,218,194) 1px, transparent 1px);
-    background-size: 20px 20px;
+        linear-gradient(-90deg, rgb(208,218,194) 1px, transparent 1px),
+        linear-gradient(rgb(208,218,194) 1px, transparent 1px),
+        linear-gradient(-90deg, rgb(208,218,194) 3px, transparent 1px),
+        linear-gradient(rgb(208,218,194) 3px, transparent 1px);
+    background-size: 
+                20px 20px,
+                100px 100px;
     background-color: rgb(236,246,222)
 }
 p {text-align:center;}
@@ -27,3 +31,4 @@ canvas {
         top: 0;
         left: 0;
 }
+
