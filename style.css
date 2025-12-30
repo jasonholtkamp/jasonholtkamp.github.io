@@ -1,23 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@350&display=swap');
 
-.source-sans-3-sourcesans3 {
-    font-family: "Source Sans 3", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 350;
-    font-style: normal;
-}
-
 body {
     font-family: 'Source Sans 3', sans-serif; 
     font-weight:350
 }
 body{
-    
+    background-position: -10px -10px;
     background-image:
         linear-gradient(-90deg, rgb(208,218,194) 1px, transparent 1px),
         linear-gradient(rgb(208,218,194) 1px, transparent 1px),
-        linear-gradient(-90deg, rgb(208,218,194) 3px, transparent 1px),
-        linear-gradient(rgb(208,218,194) 3px, transparent 1px);
+        linear-gradient(-90deg, rgb(208,218,194) 2px, transparent 1px),
+        linear-gradient(rgb(208,218,194) 2px, transparent 1px);
     background-size: 
                 20px 20px,
                 20px 20px,
@@ -25,6 +18,7 @@ body{
                 100px 100px;
     background-color: rgb(236,246,222)
 }
+
 p {text-align:center;}
 canvas {
     position:fixed;
@@ -34,3 +28,12 @@ canvas {
         left: 0;
 }
 
+
+.vertC{height:100%; width:0px; position:fixed; left:88px; top:0px; border-left:2px solid #3D6F54;}
+.vertR{height:100%; width:0px; position:fixed; left:90px; top:0px; border-left:1px solid #CEFEE6;}
+.vertL{height:100%; width:0px; position:fixed; left:87px; top:0px; border-left:1px solid #A3C4A9;}
+.horizC{height:2px; width:100%; position:fixed; left:0px; top:90px; background-color: #3D6F54;}
+.horizLU{height:1px; width:87px; position:fixed; left:0px; top:89px; background-color: #CEFEE6;}
+.horizLL{height:1px; width:87px; position:fixed; left:0px; top:91px; background-color: #A3C4A9;}
+.horizRU{height:1px; width:100%; position:fixed; left:90px; top:89px; background-color: #CEFEE6;}
+.horizRL{height:1px; width:100%; position:fixed; left:90px; top:91px; background-color: #A3C4A9;}
