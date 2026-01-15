@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="vertC"></div>
+        <div class="vertR"></div>
+        <div class="vertL"></div>
+        <div class="horizC"></div>
+        <div class="horizLU"></div>
+        <div class="horizLL"></div>
+        <div class="horizRU"></div>
+        <div class="horizRL"></div>
+        <div class="links">
+          <h6><a href="index.html">Home</a></h6>
+          <h6><a href="about_me.html">About Me</a></h6>
+          <h6><a href="projects.html">Projects</a></h6>
+        </div>
+
+        <h1>Projects</h1>
+        <h2>PCB-Stator Generator for Hybrid Drone Powertrain</h2>
+        <p>For this project, my team and I evaluated the feasibility of, modeled, simulated, and tested experimentally the use of a PCB-based stator for integration in a drone-mounted, plug-and-play hybrid powertrain. This hybrid powertrain had already been developed by <a href="https://www.lift.works/">LiftWorks</a>, who sponsored this project, using a standard radial-flux COTS electric motor to generate electricity. A PCB-based stator can provide greater efficiency at lower weight than a typical electric motor, so our job was to determine whether such a design is worth pursuing by developing and simulating both the stator itself and the new permanent magnet (PM) rotors needed. Additionally, because this project was a graded, mechanical engineering capstone project, we needed to create a custom hardware testbench for these PCBs and collect data using it.</p>
+        <p>To meet LiftWorks' requirements, the generator needed to produce 2kW of 24V 3-phase power at 9500RPM; cooling the PCB enough for it to support the extremely high current (~48A) was therefore a major focus from day one. In practice, a current of this magnitude would introduce such significant copper losses that it would destroy the efficiency of the system, not to mention turn the PCB traces into fuses, so a better route would be to generate a much higher voltage and then downconvert using power electronics, which could be made lightweight and efficient enough for it to be worthwhile. Since our job was to determine the feasibility of PCB stators in general, we instead worked to maximize convective cooling using the rotors while minimizing heat generation through PCB design.</p>
+        <p>After a lengthy literature review - I highly recommend <a href="https://doi.org/10.1049/iet-epa.2020.0141">this 2020 review article by Taqavi and Mirimani</a> if you want a good starting point for the topic - we decided on a single stator, dual rotor (SSDR) topology using concentric PCB coils. Concentric PCB coils suffer greater copper losses than other designs due to their longer trace lengths, but they are easier to parameterize and simulate and were therefore the best option for the scope of this project. Thermal management was to be achieved using the motion of the rotors themselves, with holes and small "fan blade" like protrusions improving airflow. The use of effusion cooling on the PCB itself was also investigated through CFD simulations.</p>
+        <p>Most of my contributions were toward the EM simulations, PCB modeling, and hardware testbench design. PCBs were generated in KiCAD using <a href="https://github.com/cooked/kimotor">Stefano Cottafavi's kimotor plugin</a>, as it saved us a ton of time in scripting our own parameterized stators. These layouts had to be exported as step files, imported to Autodesk Fusion to join all the trace segments together into coherent bodies and add the necessary rotors, exported again as step files, and finally imported to Ansys. A much better workflow would be to generate the coils directly in Ansys using a python script, with the added bonus of being parameterized within Ansys so optimization could be done automatically, but this would have taken prohibitively long given the project was limited to just two quarters.</p>
+        <p>In Maxwell, the rotors were set to spin at a constant rotational speed, as the exact specifications of the internal combustion engine were not available to us. The drawback of this was that efficiency could not be directly measured because the input power was effectively infinite. Therefore, efficiency was approximated by comparing the output power of different designs to determine which was the relative best. As expected based on the literature, the output voltage of the concentric windings was consistently much higher than the desired specification of 24V, and steps taken to decrease voltage - such as reducing the number of turns per coil - caused decreases in efficiency due to the cross-section through which the magnetic flux passed becoming smaller.</p>
+    </body>
+</html>
