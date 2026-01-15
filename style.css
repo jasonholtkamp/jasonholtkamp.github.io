@@ -76,4 +76,4 @@ canvas {
 .horizLL{height:1px; width:87px; position:absolute; left:0px; top:92px; background-color: #A3C4A9;}
 .horizRU{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:89px; background-color: #CEFEE6;}
 .horizRL{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:92px; background-color: #A3C4A9;}
-.links{height:100%; position:fixed; left:0px; right:calc(100% - 88px); top:94px; text-align: center;}
+.links{height:100%; position:absolute; left:0px; right:calc(100% - 88px); top:94px; text-align: center;}
