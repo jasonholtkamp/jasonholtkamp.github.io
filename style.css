@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
 h1{
   font-family: 'Source Sans 3', sans-serif;
   font-weight:400;
@@ -6,6 +7,7 @@ h1{
   margin-left: 100px;
   margin-bottom:40px;
 }
+
 h2{
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1em;
@@ -14,10 +16,27 @@ h2{
   margin-left: 100px;
 }
 
+h6{
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1em;
+  font-weight:400;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+p{
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: 100px;
+  width: 90%
+}
+
 body {
     font-family: 'Source Sans 3', sans-serif; 
     font-weight:400;
 }
+
 body{
     background-position: -10px -10px;
     background-image:
@@ -33,7 +52,6 @@ body{
     background-color: rgb(236,246,222)
 }
 
-p {text-align:center;}
 canvas {
     position:fixed;
     z-index: auto;
@@ -41,7 +59,6 @@ canvas {
         top: 0;
         left: 0;
 }
-
 
 .vertC{height:100%; width:0px; position:fixed; left:88px; top:0px; border-left:2px solid #3D6F54;}
 .vertR{height:100%; width:0px; position:fixed; left:90px; top:0px; border-left:1px solid #CEFEE6;}
@@ -51,12 +68,4 @@ canvas {
 .horizLL{height:1px; width:87px; position:absolute; left:0px; top:92px; background-color: #A3C4A9;}
 .horizRU{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:89px; background-color: #CEFEE6;}
 .horizRL{height:1px; width:calc(100% - 90px); position:absolute; left:90px; top:92px; background-color: #A3C4A9;}
-
 .links{height:100%; position:fixed; left:0px; right:calc(100% - 88px); top:94px; text-align: center;}
-h6{
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1em;
-  font-weight:400;
-  margin-top: 0.83em;
-  margin-bottom: 0.83em;
-}
